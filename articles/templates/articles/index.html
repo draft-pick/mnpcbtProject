@@ -25,9 +25,10 @@
             <div class="row align-items-center justify-content-center">
               <div class="col-lg-6 text-center">
                 <h1 class="text-white display-1">Наши статьи</h1>
-                <h2 class="display-4 font-weight-normal text-white">The time is right now!</h2>
                 <div class="btn-wrapper mt-4">
-                  <span class="badge badge-pill badge-danger text-uppercase">Danger</span>
+                  <button type="button" class="btn btn-sm btn-warning btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top" data-container="body" data-animation="true">
+                      КОПИРОВАНИЕ МАТЕРИАЛОВ САЙТА БЕЗ АКТИВНОЙ ГИПЕРССЫЛКИ НА ОРИГИНАЛ ЗАПРЕЩЕНО
+                  </button>
                 </div>
               </div>
             </div>
@@ -55,31 +56,39 @@
               <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                 <div class="card-profile-actions py-4 mt-lg-0">
                   <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
-                  <a href="#" class="btn btn-sm btn-default float-right">Message</a>
-                </div>
-              </div>
-              <div class="col-lg-4 order-lg-1">
-                <div class="card-profile-stats d-flex justify-content-center">
-                  <div>
-                    <span class="heading">22</span>
-                    <span class="description">Friends</span>
-                  </div>
-                  <div>
-                    <span class="heading">10</span>
-                    <span class="description">Photos</span>
-                  </div>
-                  <div>
-                    <span class="heading">89</span>
-                    <span class="description">Comments</span>
-                  </div>
+                  <a href="#" class="btn btn-sm btn-default float-right">
+                      Всего публикаций -
+                      {% if posts %}
+                          {{ posts|length }}
+                      {% endif %}
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="text-center mt-5">
-              <h3>Jessica Jones<span class="font-weight-light">, 27</span></h3>
-              <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>Bucharest, Romania</div>
-              <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer</div>
-              <div><i class="ni education_hat mr-2"></i>University of Computer Science</div>
+            <div class="card shadow card-lift--hover">
+              {% for i in posts %}
+                   <div class="posts-blk">
+                        <div class="d-md-flex">
+                            <div class="img-title">
+                                {% for j in image %}
+                                   {% if j.image %}
+                                      <img src="{{ j.image.url }}" class="rounded-circle">
+                                   {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="posts-cnt ml-3">
+                                <h1>{{ i.title }}</h1>
+                                <div class="date">
+                                    <button class="btn btn-icon btn-3 btn-success" type="button">
+                                        <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
+                                        <span class="btn-inner--text">{{ i.created_at|date:"d E Y" }}</span>
+                                      </button>
+                                </div>
+                                <h2>{{ i.anons }}</h2>
+                            </div>
+                        </div>
+                   </div>
+               {% endfor %}
             </div>
             <div class="mt-5 py-5 border-top text-center">
               <div class="row justify-content-center">

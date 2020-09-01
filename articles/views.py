@@ -1,6 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import *
 
 
 def index(request):
-    return render(request, 'articles/index.html')
+    posts = Posts.objects.all()
+    image = GalleryPosts.objects.all().filter(in_the_title=1)
+    context = {
+        'posts': posts,
+        'image': image,
+        'title': 'Список статей'
+    }
+    return render(request, 'articles/index.html', context=context)
