@@ -10,6 +10,9 @@ class Posts(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовать')
 
+    def get_absolute_url(self):
+        return reverse('view_articles', kwargs={"articles_id": self.pk})
+
     def __str__(self):
         return self.title
 

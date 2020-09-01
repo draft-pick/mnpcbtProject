@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
- Статьи
+ {{ title.title }}
 {% endblock %}
 
 {% block content %}
@@ -46,16 +46,8 @@
         <div class="card card-profile shadow mt--200">
           <div class="px-4">
             <div class="row justify-content-center">
-              <div class="col-lg-3 order-lg-2">
-                <div class="card-profile-image">
-                  <a href="javascript:;">
-                    <img src="../assets/img/faces/team-4.jpg" class="rounded-circle">
-                  </a>
-                </div>
-              </div>
               <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                 <div class="card-profile-actions py-4 mt-lg-0">
-                  <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
                   <a href="#" class="btn btn-sm btn-default float-right">
                       Всего публикаций -
                       {% if posts %}
@@ -65,26 +57,33 @@
                 </div>
               </div>
             </div>
-            <div class="card shadow card-lift--hover">
+            <div>
               {% for i in posts %}
-                   <div class="posts-blk">
+                   <div class="card shadow card-lift--hover posts-blk mt-4">
                         <div class="d-md-flex">
                             <div class="img-title">
                                 {% for j in image %}
-                                   {% if j.image %}
-                                      <img src="{{ j.image.url }}" class="rounded-circle">
-                                   {% endif %}
+                                    {% if j.product_id == i.id %}
+                                      <img alt="" src="{{ j.image.url }}" class="img-fluid rounded shadow-lg" width="200px">
+                                    {% endif %}
                                 {% endfor %}
                             </div>
                             <div class="posts-cnt ml-3">
-                                <h1>{{ i.title }}</h1>
+                                <h5>{{ i.id }}</h5>
+                                <h3>{{ i.title }}</h3>
                                 <div class="date">
                                     <button class="btn btn-icon btn-3 btn-success" type="button">
                                         <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
                                         <span class="btn-inner--text">{{ i.created_at|date:"d E Y" }}</span>
                                       </button>
                                 </div>
-                                <h2>{{ i.anons }}</h2>
+                                <h4>{{ i.anons }}</h4>
+                                    <a href="{{ i.get_absolute_url }}">
+                                      <button class="btn btn-icon btn-3 btn-primary" type="button">
+                                        <span class="btn-inner--text">Подробнее</span>
+                                        <span class="btn-inner--icon"><i class="ni ni-bag-17"></i></span>
+                                      </button>
+                                    </a>
                             </div>
                         </div>
                    </div>
