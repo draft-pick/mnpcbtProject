@@ -19461,9 +19461,7 @@ textarea[resize="horizontal"] {
 
 .navbar-nav .nav-link {
   font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  text-transform: normal;
   letter-spacing: 0;
   transition: all 0.15s linear;
 }

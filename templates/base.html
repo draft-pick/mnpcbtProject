@@ -24,50 +24,7 @@
 </head>
 <body class="index-page">
     {% include 'inc/_navbar.html' %}
-  <div class="section section-hero section-shaped">
-      <div class="shape shape-style-1 shape-primary">
-        <span class="span-150"></span>
-        <span class="span-50"></span>
-        <span class="span-50"></span>
-        <span class="span-75"></span>
-        <span class="span-100"></span>
-        <span class="span-75"></span>
-        <span class="span-50"></span>
-        <span class="span-100"></span>
-        <span class="span-50"></span>
-        <span class="span-100"></span>
-      </div>
-      <div class="page-header">
-{% include 'inc/_sidebar.html' %}
 
-        <div class="container shape-container d-flex align-items-center py-lg">
-          <div class="col px-0">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-lg-8 text-center">
-               <p class="lead text-white">Государственное бюджетное учреждение здравоохранения города Москвы "Московский научно-практический центр борьбы с туберкулезом Департамента здравоохранения города Москвы"</p>
-                <p class="lead text-white">The Moscow Research and Clinical Center for Tuberculosis Control of the Moscow Government Department of Health</p>
-                <div class="btn-wrapper mt-5" data-aos="fade-right">
-                  <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-icon btn-3 btn-default">
-                    <span class="btn-inner--icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAFRUlEQVRIie2Wa0xTdxjGfz09h14oLdTK2oIMEKwyEXSoQ91m1Cxmbm5kibJLmMkkajCLUWcyb9+WGGdwyTQzXhbM4iBm2aa7mKnJhOkUBRXwBkglXApyawultvZy9gF1AirD7MsWn+QkJ/n/n/fJ8573fc8Lz/B/h+KH0ut2WUYAqG3tv1xR72p8EsEQKepfCtizzW0N0QDtlvGuc1LyWXd/sHcksZxZljlRwf5YTeWZSDHqYmlS2ge5oFCQPVnx/LTJIc7c6CUsP5psNUhkXanGxIBOl+QxBydPmOhwBx4rqFMreT3TgLbuPD0HvsKbkoaovliOs6We8evXozKbMY+B9IQojtV46ekPDwtiNIqYDGo0BgMAJoMao1FPP8FHitrMEvNSBDoPHqC7tJSUdWupUI5B8BZsDEZnZVGzciWOkhKQZSzRSvJm6chKVKFQjJTARyNSpeDtaVrmRjRSX7CCQE8PGfv3E5OdjaBQIHx9srm7cuJixn++k+6yMq6uWYOvtRVRqWDuRDXvztRhjBRGJWozS+RNVxFx9CC1mzZhXbKE1C1bEPV6Wp0hjl9ydg8UVXuA4uYxqDYXEpOdzZWCggfurffcz0ge2b02QsFbU7XMN9zGvu5j+uvrmbJ3L7GLFhEMyZTV+Sg576Gpsz8o3id578ocrfZjm7iYOdtn0PLFDpxnzzJ+wwbUcXG8MkFNSqxEVZP/sS7n2yJwHfmOayUlxOflYc7JAYUChyvEsRovzodqRhwaoLY9QHOEiQWbC9GV/ciVggKsublYly7FGq3kOb0GR/lgzuxUFWN9ndzcuB05GGTyrl2o4+MJhmT+bPBx4ZYfeUiXiJboCGmccZg+l1pCjMvKYdLUF+k49A2txcVYly5FqVQOu2t0NtFYVETMzJlYlixBIQh0e8KU2330+WTiYwbHd0RHSIpfPv0slJ40dlTV01dVRWxMDAAdTidRGRmjoVNzqzMsmuovCxqlbVRETUwMar0egFiApqZR8U31tcLo+uRfhNiVmhm2JDxFqu+9P02qu0KasHgy7lVXX0amceihSScwI1lFlFpADodpO3yYvmvXGLds2cCFe+mNysgg7qN87ufOa7fTXFSENjER3niPypYw/uDgki6/e9kltLnuBpp7gtx/2lxBkkwi8yZpiFIL+Nvbub5+PT2nT5OQn0+7LmGYg9+uemlzhwDQJieTuGoVvVVVODeu5mWtA7WkYLDG3cCgFFujleTNjnowpTpPnKBm5Up0aWmM21bIz+1GLjQOHyC9d2SKz3koq/MRCoPKYiGtsBDTggXYN6xleu1R3szQoJH+Hn0igCjArBQ105MGBANOJ/bCQnwOB5O2b6dFn8TR8jv4AjKP6nmAsAzn7X4aOgIsTNdiMSix5uainzqVhm3bkCoreX/NJ5zq0FEJCC8kGlQPu+wuLaVq+XIko5Hknbs57onnp8tefIHH/KCHoNsTpvichz/uudfZbKTv2YPOZuPm6hXM6TrDhwsSjOLMVF20MVIg6PHQuHs3fdXVTNi6lZaxaRRduIP/HwoOdV9u99PQEWRhugazQUXC8uUYMjNp2LEDXVySJAC4Kyqozs8HIHX3Xn4Pp/JrtfepRB9GlyfEtw99e0NWFlP27UOWZcSI7w9Rd/MaxhWr8KTO4MtTTrz+4ZvHfUQi0eX2YXK7B4K7ffT09OJ+wupz4hJU2SUWZerRSDK97+QhhrW6vtv5G+7ckLVNRw6WnxnJhSNS1IsBXbYZ/cCyF9C5Kq7UjbjsXQfOXUTMmRX3mkpSRo6k8wz/ffwFbuom1lqD++UAAAAASUVORK5CYII="/></span>
-                    <span class="btn-inner--text">English Version</span>
-                  </a>
-                  <a href="https://github.com/creativetimofficial/argon-design-system" class="btn btn-success btn-icon mb-3 mb-sm-0" target="_blank">
-                    <span class="btn-inner--icon"><i class="ni ni-glasses-2"></i></span>
-                    <span class="btn-inner--text">Версия для слабовидящих</span>
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="separator separator-bottom separator-skew zindex-100">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-    </div>
 {% block content %}{% endblock %}
  <!--   Core JS Files   -->
   <script src="{% static 'assets/js/core/jquery.min.js'%}" type="text/javascript"></script>

@@ -1,6 +1,5 @@
 .header-scrolled {
-  color: #172b4d !important;
-  background: rgba(255, 255, 255, 0.95) !important;
+  background: #172b4d !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
 }
 .badge {
