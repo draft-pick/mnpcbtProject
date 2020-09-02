@@ -1,6 +1,8 @@
 .header-scrolled {
-  background: #172b4d !important;
+  background: rgba(23,43,77, .9) !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
+  height: 60px;
+  transition: .5s;
 }
 .badge {
   font-size: 16px !important;

@@ -79,7 +79,7 @@
                             <div class="carousel-wrap">
                                 <div class="owl-carousel owl-theme slider-articles">
                                     {% for j in image %}
-                                        <div class="item"><img src="{{ j.image.url }}" alt=""></div>
+                                        <div class="item"><a href="{{ j.image.url }}"><img src="{{ j.image.url }}" alt=""></a></div>
                                     {% endfor %}
                                 </div>
                               </div>
