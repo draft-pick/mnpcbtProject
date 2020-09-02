@@ -16,8 +16,8 @@ AOS.init({
   }
 
   // Slider articles
-  $(document).ready(function(){
-    const slider = $("#slider-articles").owlCarousel({
+$(document).ready(function(){
+  $(".slider-articles").owlCarousel({
         loop:true,
         margin:10,
         nav:true,

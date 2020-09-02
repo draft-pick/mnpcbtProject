@@ -73,20 +73,17 @@
                           </div>
                       </div>
                   </div>
-                  <div class="d-md-flex">
                       <div class="ml-3">
                           <h5>{{ articles_item.content }}</h5>
-                      <div class="owl-carousel owl-theme" id="slider">
-                        {% for j in image %}
-                            <div class="slide" style="background-image: url('{{ j.image.url }}')"></div>
-                        {% endfor %}
-                      </div>
                       <div class="line-view-cont my-4"></div>
-                            {% for j in image %}
-                                <img src="{{ j.image.url }}" class="img-fluid rounded shadow-lg" width="200px">
-                            {% endfor %}
-                      </div>
-                  </div>
+                            <div class="carousel-wrap">
+                                <div class="owl-carousel owl-theme slider-articles">
+                                    {% for j in image %}
+                                        <div class="item"><img src="{{ j.image.url }}" alt=""></div>
+                                    {% endfor %}
+                                </div>
+                              </div>
+
 
                   <button class="btn btn-lg btn-warning btn-icon-only rounded-circle m-3" type="button" onclick="history.back();">
                     <span class="btn-inner--icon"><i class="ni ni-bold-left"></i></span>
