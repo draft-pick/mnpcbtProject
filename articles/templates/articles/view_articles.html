@@ -27,6 +27,28 @@
                 <h1 class="text-white display-1">{{ articles_item.title }}</h1>
               </div>
             </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <button class="btn btn-icon btn-3 btn-success" type="button">
+                         <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
+                         <span class="btn-inner--text">{{ articles_item.created_at|date:"d E Y" }}</span>
+                      </button>
+                  </div>
+                  <div class="col-md-6 text-right">
+                      <button class="btn btn-lg btn-facebook btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-facebook-square"></i></span>
+                      </button>
+                      <button class="btn btn-lg btn-twitter btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+                      </button>
+                      <button class="btn btn-lg btn-vk btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-vk"></i></span>
+                      </button>
+                      <button class="btn btn-lg btn-ok btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-odnoklassniki"></i></span>
+                      </button>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
@@ -37,46 +59,42 @@
       </div>
     </div>
        <section class="section">
-      <div class="container">
-        <div class="card card-profile shadow mt--200">
-          <div class="px-4">
-
-
-
-                        <div class="row justify-content-center">
-                          <div class="col-lg-3 order-lg-2">
-                            <div class="card-profile-image">
+          <div class="container">
+            <div class="card card-profile shadow mt--200">
+              <div class="px-4">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-5 order-lg-2">
+                          <div class="card-profile-image">
                               <a href="javascript:;">
-                               {% for i in image_title %}
-
-                                      <img src="{{ i.image.url }}" class="img-fluid rounded-circle shadow" width="200px">
-
-                                {% endfor %}
+                                  {% for i in image_title %}
+                                    <img src="{{ i.image.url }}" class="img-fluid rounded shadow-lg" width="500px">
+                                  {% endfor %}
                               </a>
-                            </div>
                           </div>
-                        </div>
+                      </div>
+                  </div>
+                  <div class="d-md-flex">
+                      <div class="ml-3">
+                          <h5>{{ articles_item.content }}</h5>
+                      <div class="owl-carousel owl-theme" id="slider">
+                        {% for j in image %}
+                            <div class="slide" style="background-image: url('{{ j.image.url }}')"></div>
+                        {% endfor %}
+                      </div>
+                      <div class="line-view-cont my-4"></div>
+                            {% for j in image %}
+                                <img src="{{ j.image.url }}" class="img-fluid rounded shadow-lg" width="200px">
+                            {% endfor %}
+                      </div>
+                  </div>
 
-                        <div class="d-md-flex">
-                            <div class="posts-cnt ml-3">
-                                <div class="date">
-                                    <button class="btn btn-icon btn-3 btn-success" type="button">
-                                        <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
-                                        <span class="btn-inner--text">{{ articles_item.created_at|date:"d E Y" }}</span>
-                                      </button>
-                                </div>
-                                <h5>{{ articles_item.content }}</h5>
-                                {% for j in image %}
-
-                                      <img src="{{ j.image.url }}" class="img-fluid rounded shadow-lg" width="200px">
-
-                                {% endfor %}
-
-                            </div>
-                        </div>
-                   </div>
+                  <button class="btn btn-lg btn-warning btn-icon-only rounded-circle m-3" type="button" onclick="history.back();">
+                    <span class="btn-inner--icon"><i class="ni ni-bold-left"></i></span>
+                  </button>
+              </div>
           </div>
         </div>
-      </div>
     </section>
+</div>
+
 {% endblock %}

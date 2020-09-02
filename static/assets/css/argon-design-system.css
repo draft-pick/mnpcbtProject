@@ -2639,6 +2639,78 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: #3b5998;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-facebook:hover {
+  color: #fff;
+  background-color: #3d55df;
+  border-color: #324cdd;
+}
+
+.btn-facebook:focus,
+.btn-facebook.focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(118, 135, 232, 0.5);
+}
+
+.btn-twitter {
+  color: #fff;
+  background-color: #00acee;
+  border-color: #00acee;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-twitter:hover {
+  color: #fff;
+  background-color: #3d55df;
+  border-color: #324cdd;
+}
+
+.btn-twitter:focus,
+.btn-twitter.focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(118, 135, 232, 0.5);
+}
+
+.btn-vk {
+  color: #fff;
+  background-color: #4d7198;
+  border-color: #4d7198;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-vk:hover {
+  color: #fff;
+  background-color: #4d7198;
+  border-color: #4d7198;
+}
+
+.btn-vk:focus,
+.btn-vk.focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(118, 135, 232, 0.5);
+}
+
+.btn-ok {
+  color: #fff;
+  background-color: #ed812b;
+  border-color: #ed812b;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-ok:hover {
+  color: #fff;
+  background-color: #ed812b;
+  border-color: #ed812b;
+}
+
+.btn-ok:focus,
+.btn-ok.focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(118, 135, 232, 0.5);
+}
+
 .btn-primary {
   color: #fff;
   background-color: #5e72e4;

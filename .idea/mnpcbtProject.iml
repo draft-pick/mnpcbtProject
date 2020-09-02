@@ -20,6 +20,7 @@
     <orderEntry type="library" name="t" level="application" />
     <orderEntry type="library" name="aos" level="application" />
     <orderEntry type="library" name="normalize" level="application" />
+    <orderEntry type="library" name="OwlCarousel2" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

@@ -14,3 +14,23 @@ AOS.init({
   if ($(window).scrollTop() > 40) {
     $('#navbar-main').addClass('header-scrolled');
   }
+
+  // Slider articles
+  $(document).ready(function(){
+    const slider = $("#slider-articles").owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+});

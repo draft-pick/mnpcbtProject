@@ -35,6 +35,11 @@
 .contact-info {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
 
+.line-view-cont {
+  height: 8px;
+  background: #172b4d;
+  position: relative;
 }
 
