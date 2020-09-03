@@ -77,13 +77,15 @@
                           <h5>{{ articles_item.content }}</h5>
                       <div class="line-view-cont my-4"></div>
                             <div class="carousel-wrap">
-                                <div class="owl-carousel owl-theme slider-articles">
+                                <div class="owl-carousel owl-theme" id="slider-articles">
                                     {% for j in image %}
-                                        <div class="item"><a href="{{ j.image.url }}"><img src="{{ j.image.url }}" alt=""></a></div>
+                                        <div class="item"><a href="{{ j.image.url }}" data-fancybox="example_group" data-caption="Заголовок"><img src=
+                                                                                                                                                                     "{{ j.image.url }}"
+                                                                                                                                                   alt=""></a></div>
+
                                     {% endfor %}
                                 </div>
                               </div>
-
 
                   <button class="btn btn-lg btn-warning btn-icon-only rounded-circle m-3" type="button" onclick="history.back();">
                     <span class="btn-inner--icon"><i class="ni ni-bold-left"></i></span>

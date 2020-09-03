@@ -17,13 +17,61 @@ AOS.init({
 
   // Slider articles
 $(document).ready(function(){
-  $(".slider-articles").owlCarousel({
-        loop:true,
+  $('#slider-articles').owlCarousel({
+        loop:false,
         margin:10,
         nav:true,
+        dots: false,
         responsive:{
             0:{
                 items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+});
+
+    // Slider branches
+$(document).ready(function(){
+  $('#slider-branches').owlCarousel({
+        loop:false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        margin:10,
+        nav:true,
+        dots: false,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
+});
+
+    // Slider important link
+$(document).ready(function(){
+  $('#slider-important-link').owlCarousel({
+        loop:true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 3000,
+        margin:10,
+        nav:true,
+        dots: false,
+        responsive:{
+            0:{
+                items:2
             },
             600:{
                 items:3
