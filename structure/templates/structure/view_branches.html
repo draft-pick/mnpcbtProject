@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ branches_item }}
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="section section-hero section-shaped">
+      <div class="shape shape-style-3 shape-default">
+        <span class="span-150"></span>
+        <span class="span-50"></span>
+        <span class="span-50"></span>
+        <span class="span-75"></span>
+        <span class="span-100"></span>
+        <span class="span-75"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+      </div>
+      <div class="page-header">
+        <div class="container shape-container d-flex align-items-center py-lg">
+          <div class="col px-0">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h1 class="text-white display-1">{{ title }}</h1>
+                <div class="btn-wrapper mt-4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+       <section class="section">
+      <div class="container">
+        <div class="mt--200">
+        <div class="row">
+            {% for i in branches %}
+                <div class="col-md-4 card shadow-sm py-3 px-3 info m-3">
+                    <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">
+                        <i class="ni ni-building"></i>
+                    </div>
+                    <h6 class="info-title text-uppercase text-primary">{{ i.name}}</h6>
+                    <div class="description opacity-8">
+                        <span class="badge badge-pill badge-primary text-uppercase">Адрес:</span>
+                        <h6>{{ i.address}}</h6>
+                        <span class="badge badge-pill badge-primary text-uppercase">Телефон:</span><br>
+                        <h6>{{ i.phones }}</h6>
+                        <span class="badge badge-pill badge-primary text-uppercase">Электронный адрес:</span>
+                        <h6>{{ i.email}}</h6>
+                    </div>
+                    <a href="#" class="text-right text-primary">ПОДРОБНЕЕ
+                        <i class="ni ni-curved-next text-primary"></i>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+      </div>
+    </section>
+</div>
+{% endblock %}

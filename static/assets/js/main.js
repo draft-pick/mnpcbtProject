@@ -39,9 +39,10 @@ $(document).ready(function(){
     // Slider branches
 $(document).ready(function(){
   $('#slider-branches').owlCarousel({
-        loop:false,
+        loop:true,
         autoplay: true,
         autoplayHoverPause: true,
+        autoplaySpeed: 2000,
         margin:10,
         nav:true,
         dots: false,
