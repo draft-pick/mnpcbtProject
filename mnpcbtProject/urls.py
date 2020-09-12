@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('main.url')),
     path('articles/', include('articles.url')),
     path('structure/', include('structure.url')),
+    path('news/', include('news.url')),
 
 ]
 
