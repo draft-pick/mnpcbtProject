@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -28,9 +29,10 @@
 </head>
 <body class="index-page">
     {% include 'inc/_navbar.html' %}
+    {% autoescape off %}
 {% block content %}
-
 {% endblock %}
+    {% endautoescape %}
     <footer class="footer has-cards">
     <div class="container container-lg">
       <div class="row">

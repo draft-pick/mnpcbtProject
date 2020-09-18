@@ -1,14 +1,14 @@
 from django.db import models
 from django.urls import reverse
-# from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Branches(models.Model):
     name = models.CharField(max_length=250, verbose_name='Наименование')
-    address = models.TextField(blank=True, verbose_name='Адрес')
-    phones = models.TextField(verbose_name='Телефоны')
+    address = RichTextUploadingField(blank=True, verbose_name='Адрес')
+    phones = RichTextUploadingField(verbose_name='Телефоны')
     email = models.EmailField(verbose_name='E-mail')
-    content = models.TextField(blank=True, verbose_name='Контент')
+    content = RichTextUploadingField(blank=True, verbose_name='Контент')
 
     def get_absolute_url(self):
         return reverse('view_branch', kwargs={"branch_id": self.pk})
