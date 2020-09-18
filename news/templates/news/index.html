@@ -5,37 +5,59 @@
 {% endblock %}
 
 {% block content %}
-<div class="wrapper">
-    <div class="section section-hero section-shaped">
-      <div class="shape shape-style-3 shape-default">
-        <span class="span-150"></span>
-        <span class="span-50"></span>
-        <span class="span-50"></span>
-        <span class="span-75"></span>
-        <span class="span-100"></span>
-        <span class="span-75"></span>
-        <span class="span-50"></span>
-        <span class="span-100"></span>
-        <span class="span-50"></span>
-        <span class="span-100"></span>
-      </div>
-      <div class="page-header">
-        <div class="container shape-container d-flex align-items-center py-lg">
-          <div class="col px-0">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-lg-6 text-center">
-                <h1 class="text-white display-1">{{ title }}</h1>
-                <div class="btn-wrapper mt-4">
+{% include 'inc/_headlist.html' %}
+       <section class="section">
+      <div class="container">
+        <div class="card card-profile shadow mt--200">
+          <div class="px-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+                <div class="card-profile-actions py-4 mt-lg-0">
+                    <a href="#" class="btn btn-sm btn-default float-right">
+                      Всего новостей -
+                      {% if news %}
+                          {{ news|length }}
+                      {% endif %}
+                  </a>
                 </div>
               </div>
+            </div>
+            <div>
+              {% for i in news %}
+                   <div class="card shadow card-lift--hover posts-blk mt-4 p-3">
+                        <div class="d-md-flex">
+                            <div class="img-title d-md-flex align-items-center justify-content-center">
+                                {% for j in image %}
+                                    {% if j.product_id == i.id %}
+                                      <img alt="" src="{{ j.image.url }}" class="img-fluid rounded shadow-lg" width="300px">
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-primary">{{ i.title }}</h4>
+                                <div class="date">
+                                    <button class="btn btn-danger btn-icon-only rounded-circle" type="button">
+                                        <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
+                                    </button>
+                                        <span class="btn-inner--text">{{ i.created_at|date:"d E Y" }}</span>
+
+                                </div>
+                                <h5>{{ i.anons }}</h5>
+                                    <div class="text-right">
+                                        <a href="#">
+                                          <button class="btn btn-lg btn-success btn-icon-only rounded-circle" type="button">
+                                            <span class="btn-inner--icon"><i class="ni ni-curved-next"></i></span>
+                                          </button>
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                   </div>
+               {% endfor %}
             </div>
           </div>
         </div>
       </div>
-      <div class="separator separator-bottom separator-skew zindex-100">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-    </div>
+    </section>
+ </div>
 {% endblock %}

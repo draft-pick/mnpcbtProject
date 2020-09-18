@@ -79,10 +79,8 @@
                             <div class="carousel-wrap">
                                 <div class="owl-carousel owl-theme" id="slider-articles">
                                     {% for j in image %}
-                                        <div class="item"><a href="{{ j.image.url }}" data-fancybox="example_group" data-caption="Заголовок"><img src=
-                                                                                                                                                                     "{{ j.image.url }}"
-                                                                                                                                                   alt=""></a></div>
-
+                                        <div class="item"><a href="{{ j.image.url }}" data-fancybox="example_group" data-caption="Заголовок">
+                                            <img src="{{ j.image.url }}" alt=""></a></div>
                                     {% endfor %}
                                 </div>
                               </div>

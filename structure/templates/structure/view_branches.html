@@ -24,7 +24,7 @@
           <div class="col px-0">
             <div class="row align-items-center justify-content-center">
               <div class="col-lg-6 text-center">
-                <h1 class="text-white display-1">{{ title }}</h1>
+                <h1 class="text-white display-1">{{ branches_item.name }}</h1>
                 <div class="btn-wrapper mt-4">
                 </div>
               </div>
@@ -42,25 +42,41 @@
       <div class="container">
         <div class="mt--200">
         <div class="row">
-            {% for i in branches %}
-                <div class="col-md-4 card shadow-sm py-3 px-3 info m-3">
-                    <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">
-                        <i class="ni ni-building"></i>
+                              <div class="nav-wrapper">
+                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="ni ni-cloud-upload-96 mr-2"></i>Общая информация</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-bell-55 mr-2"></i>Контактная информация</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="ni ni-calendar-grid-58 mr-2"></i>Дополнительная информация</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card shadow">
+                <div class="card-body">
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                       {{ branches_item.content }}
+                       {% for j in image %}
+                           <div class="item"><a href="{{ j.image.url }}" data-fancybox="example_group" data-caption="Заголовок">
+                               <img src="{{ j.image.url }}" alt=""></a></div>
+                       {% endfor %}
                     </div>
-                    <h6 class="info-title text-uppercase text-primary">{{ i.name}}</h6>
-                    <div class="description opacity-8">
-                        <span class="badge badge-pill badge-primary text-uppercase">Адрес:</span>
-                        <h6>{{ i.address}}</h6>
-                        <span class="badge badge-pill badge-primary text-uppercase">Телефон:</span><br>
-                        <h6>{{ i.phones }}</h6>
-                        <span class="badge badge-pill badge-primary text-uppercase">Электронный адрес:</span>
-                        <h6>{{ i.email}}</h6>
+                    <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                        {{ branches_item.address}}
+                        {{ branches_item.phones }}
+                        {{ branches_item.email }}
                     </div>
-                    <a href="#" class="text-right text-primary">ПОДРОБНЕЕ
-                        <i class="ni ni-curved-next text-primary"></i>
-                    </a>
+                    <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+                      <p class="description">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                    </div>
+                  </div>
                 </div>
-            {% endfor %}
+              </div>
+
         </div>
         </div>
       </div>
