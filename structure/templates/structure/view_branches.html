@@ -60,23 +60,51 @@
                   <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
                        {{ branches_item.content }}
-                       {% for j in image %}
-                           <div class="item"><a href="{{ j.image.url }}" data-fancybox="example_group" data-caption="Заголовок">
-                               <img src="{{ j.image.url }}" alt=""></a></div>
-                       {% endfor %}
+                       <div class="carousel-wrap">
+                                <div class="owl-carousel owl-theme" id="slider-articles">
+                                    {% for j in image %}
+                                        <div class="item"><a href="{{ j.image.url }}" data-fancybox="example_group" data-caption="Заголовок">
+                                            <img src="{{ j.image.url }}" alt=""></a></div>
+                                    {% endfor %}
+                                </div>
+                              </div>
                     </div>
-                    <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-                        {{ branches_item.address}}
-                        {{ branches_item.phones }}
-                        {{ branches_item.email }}
+                    <div class="tab-pane fade text-center text-uppercase" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                        <button class="btn btn-lg btn-primary btn-icon-only rounded-circle" type="button">
+                            <span class="btn-inner--icon"><i class="ni ni-square-pin"></i></span>
+                        </button>
+                            {{ branches_item.address}}
+                            <hr>
+                        <button class="btn btn-lg btn-primary btn-icon-only rounded-circle" type="button">
+                            <span class="btn-inner--icon"><i class="fa fa-phone"></i></span>
+                        </button>
+                            {{ branches_item.phones }}
+                            <hr>
+                        <button class="btn btn-lg btn-primary btn-icon-only rounded-circle" type="button">
+                            <span class="btn-inner--icon"><i class="fa fa-envelope-o"></i></span>
+                        </button>
+                            <br>
+                            {{ branches_item.email }}
+                            <hr>
+                        <button class="btn btn-lg btn-primary btn-icon-only rounded-circle" type="button">
+                            <span class="btn-inner--icon"><i class="ni ni-map-big"></i></span>
+                        </button>
+                            {% for j in image_map %}
+                               <small class="d-block text-uppercase font-weight-bold mb-4"></small>
+                                <a href="{{ j.image.url }}" data-fancybox="example_group">
+                                   <img src="{{ j.image.url }}" alt="" class="img-fluid rounded shadow"></a>
+                            {% endfor %}
                     </div>
                     <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
                       <p class="description">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                     </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
+<button class="btn btn-lg btn-warning btn-icon-only rounded-circle m-3" type="button" onclick="history.back();">
+                    <span class="btn-inner--icon"><i class="ni ni-bold-left"></i></span>
+                  </button>
         </div>
         </div>
       </div>
