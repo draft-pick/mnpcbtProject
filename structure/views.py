@@ -16,5 +16,7 @@ def view_branch(request, branch_id):
     image_title = GalleryBranches.objects.all().filter(in_the_cont=1, keyBranches=branch_id)
     image = GalleryBranches.objects.all().filter(keyBranches=branch_id)
     image_map = GalleryBranches.objects.all().filter(location_map=1, keyBranches=branch_id)
-    return render(request, 'structure/view_branches.html', {"branches_item": branches_item, 'image': image, 'image_title': image_title, 'image_map': image_map})
+    specialists = Specialists.objects.all().filter(keyBranches=branch_id)
+    return render(request, 'structure/view_branches.html', {"branches_item": branches_item, 'image': image, 'image_title': image_title, 'image_map': image_map,
+                                                            "specialists": specialists})
 

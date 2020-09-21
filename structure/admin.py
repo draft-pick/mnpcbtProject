@@ -13,6 +13,15 @@ class GalleryInline(admin.TabularInline):
     model = GalleryBranches
 
 
+class SpecialistsInline(admin.TabularInline):
+    br_name = 'keyBranches'
+    model = Specialists
+    list_display = ('name', 'surname')
+
+
 @admin.register(Branches)
 class BranchesAdmin(admin.ModelAdmin):
-    inlines = [GalleryInline]
+    inlines = [GalleryInline, SpecialistsInline]
+
+
+

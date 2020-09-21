@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ {{ title }}
+{% endblock %}
+
+{% block content %}
+{% include 'inc/_headlist.html' %}
+    <section class="section">
+      <div class="container">
+        <div class="card card-profile shadow mt--200">
+          <div class="px-4">
+
+              <div class="card m-3 shadow-sm text-center">
+                <h3>Информация для лиц с инвалидностью</h3>
+                  <button class="btn btn-link text-danger">Читать</button>
+              </div>
+
+              <div class="card m-3 shadow-sm text-center">
+                <h3>Памятка для граждан о гарантиях бесплатного оказания медицинской помощи</h3>
+                  <button class="btn btn-link text-danger">Читать</button>
+              </div>
+
+          </div>
+        </div>
+    </section>
+{% endblock %}

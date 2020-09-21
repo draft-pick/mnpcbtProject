@@ -96,7 +96,44 @@
                             {% endfor %}
                     </div>
                     <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-                      <p class="description">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                    <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Фамилия</th>
+                                <th>Имя</th>
+                                <th>Отчество</th>
+                                <th>Подразделение</th>
+                                <th>Штатная должность</th>
+                                <th>ВУЗ</th>
+                                <th>Дата окончания</th>
+                                <th>Специальность</th>
+                                <th>Сертификат</th>
+                                <th>Дата выдачи</th>
+                                <th>Категория</th>
+                                <th>Ученая степень</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              {% for s in specialists %}
+                                        <td>{{ s.surname }}</td>
+                                        <td>{{ s.name }}</td>
+                                        <td>{{ s.patronymic }}</td>
+                                        <td>{{ s.division }}</td>
+                                        <td>{{ s.job }}</td>
+                                        <td>{{ s.vyz }}</td>
+                                        <td>{{ s.date_vyz }}</td>
+                                        <td>{{ s.profession }}</td>
+                                        <td>{{ s.sertif }}</td>
+                                        <td>{{ s.date_sertif }}</td>
+                                        <td>{{ s.category }}</td>
+                                        <td>{{ s.degree }}</td>
+                              {% endfor %}
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
                     </div>
                   </div>
                 </div>
