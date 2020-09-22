@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ news_item.title }}
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="section section-hero section-shaped">
+      <div class="shape shape-style-3 shape-default">
+        <span class="span-150"></span>
+        <span class="span-50"></span>
+        <span class="span-50"></span>
+        <span class="span-75"></span>
+        <span class="span-100"></span>
+        <span class="span-75"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+      </div>
+      <div class="page-header">
+        <div class="container shape-container d-flex align-items-center py-lg">
+          <div class="col px-0">
+            <div class="row align-items-center justify-content-center">
+              <div class="text-center">
+                <h1 class="text-white display-1">{{ news_item.title }}</h1>
+              </div>
+            </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <button class="btn btn-icon btn-3 btn-success" type="button">
+                         <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
+                         <span class="btn-inner--text">{{ news_item.created_at|date:"d E Y" }}</span>
+                      </button>
+                  </div>
+                  <div class="col-md-6 text-right">
+                      <button class="btn btn-lg btn-facebook btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-facebook-square"></i></span>
+                      </button>
+                      <button class="btn btn-lg btn-twitter btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+                      </button>
+                      <button class="btn btn-lg btn-vk btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-vk"></i></span>
+                      </button>
+                      <button class="btn btn-lg btn-ok btn-icon-only rounded-circle" type="button">
+                        <span class="btn-inner--icon"><i class="fa fa-odnoklassniki"></i></span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+       <section class="section">
+          <div class="container">
+            <div class="card card-profile shadow mt--200">
+              <div class="px-4">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-5 order-lg-2">
+                          <div class="card-profile-image my-3">
+                              <a href="javascript:;">
+                                  {% for i in image_title %}
+                                    <img src="{{ i.image.url }}" class="img-fluid rounded shadow-lg" width="300px">
+                                  {% endfor %}
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                      <div class="ml-3">
+                          <h5>{{ news_item.content }}</h5>
+                      <div class="line-view-cont my-4"></div>
+                            <div class="carousel-wrap">
+                                <div class="owl-carousel owl-theme" id="slider-articles">
+                                    {% for j in image %}
+                                        <div class="item"><a href="{{ j.image.url }}" data-fancybox="example_group" data-caption="Заголовок">
+                                            <img src="{{ j.image.url }}" alt=""></a></div>
+                                    {% endfor %}
+                                </div>
+                              </div>
+
+                  <button class="btn btn-lg btn-warning btn-icon-only rounded-circle m-3" type="button" onclick="history.back();">
+                    <span class="btn-inner--icon"><i class="ni ni-bold-left"></i></span>
+                  </button>
+              </div>
+          </div>
+        </div>
+       </div>
+    </section>
+</div>
+
+{% endblock %}
