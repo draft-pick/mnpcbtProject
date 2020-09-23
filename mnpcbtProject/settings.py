@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'ckeditor',
     'ckeditor_uploader',
+    'import_export',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -44,7 +45,8 @@ INSTALLED_APPS = [
     'articles.apps.ArticlesConfig',
     'structure.apps.StructureConfig',
     'news.apps.NewsConfig',
-    'need_to_know.apps.NeedToNowConfig'
+    'need_to_know.apps.NeedToNowConfig',
+    'paid_services.apps.PaidServicesConfig',
 ]
 
 MIDDLEWARE = [

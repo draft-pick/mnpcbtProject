@@ -25,6 +25,7 @@ urlpatterns = [
     path('structure/', include('structure.url')),
     path('news/', include('news.url')),
     path('need-to-know/', include('need_to_know.url')),
+    path('paid-services/', include('paid_services.url')),
     path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
