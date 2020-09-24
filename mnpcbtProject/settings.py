@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'need_to_know.apps.NeedToNowConfig',
     'paid_services.apps.PaidServicesConfig',
+    'patients_school.apps.PatientsSchoolConfig',
 ]
 
 MIDDLEWARE = [
