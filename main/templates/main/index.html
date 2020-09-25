@@ -41,55 +41,12 @@
                 </div>
               </div>
                 <div class="col-lg-4 text-center" data-aos="fade-left" style="z-index: 1000;">
-                    <div class="dropdown">
-                      <a href="#" class="btn-lg btn-success dropdown-toggle " data-toggle="dropdown" id="navbarDropdownMenuLink2">
-                          <img src="../../assets/img/icons/flags/US.png" /> ШКОЛА ПАЦИЕНТА
-                      </a>
-                                 <div class="dropdown-menu dropdown-menu-xl">
-              <div class="dropdown-menu-inner">
-                <a href="{% url 'stay_home' %}" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                    <i class="ni ni-ambulance"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h6 class="heading text-primary mb-md-1">Рекомендуемый режим дня больного туберкулезом без бактериовыделения, получающего лечение на дому в условиях режима "Сиди дома" </h6>
-                  </div>
-                </a>
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-circle-08"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h6 class="heading text-primary mb-md-1">Наши специалисты</h6>
-                  </div>
-                </a>
-                <a href="{% url 'existing_org' %}" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-danger rounded-circle text-white">
-                    <i class="ni ni-building"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h5 class="heading text-warning mb-md-1">Вышестоящие организации</h5>
-                  </div>
-                </a>
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-info rounded-circle text-white">
-                    <i class="ni ni-single-copy-04"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h5 class="heading text-info mb-md-1">Сведения об образовательной организации</h5>
-                  </div>
-                </a>
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-default rounded-circle text-white">
-                    <i class="ni ni-collection"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h5 class="heading text-default mb-md-1">Документы</h5>
-                  </div>
-                </a>
-              </div>
-            </div>
-                    </div>
+                    <a class="text-white" href="{%  url 'patients-school' %}">
+                        <button class="btn-lg btn-icon btn-3 btn-primary p-4" type="button">
+                                <span class="btn-inner--icon"><i class="ni ni-bag-17"></i></span>
+                                <span class="btn-inner--text">ШКОЛА ПАЦИЕНТА</span>
+                        </button>
+                    </a>
                     <hr>
                     <button class="btn btn-icon btn-3 btn-info mb-3" type="button">
                         <span class="btn-inner--icon"><i class="ni ni-like-2"></i></span>

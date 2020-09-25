@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ {{ title }}
+{% endblock %}
+
+{% block content %}
+    {% include 'inc/_headlist.html' %}
+        <section class="section m-lg-5 mt--150 card border-0 shadow-lg" style="background-image: url('/static/assets/img/ill/1.svg');">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-3">
+                <a href="{% url 'stay_home' %}">
+                    <div class="card card-lift--hover shadow border-0 bg-gradient-info m-3 p-2">
+                        <h4 class="text-white text-uppercase">Рекомендуемый режим дня больного туберкулезом без бактериовыделения, получающего лечение на дому в условиях режима "Сиди дома"</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-lift--hover shadow border-0 bg-gradient-purple m-3 p-2">
+                    <h4 class="text-white text-uppercase">Памятка по профилактике новой коронавирусной инфекции COVID-19 для больных туберкулезом, получающих лечение амбулаторно (на дому)</h4>
+                </div>
+            </div>
+             <div class="col-md-3">
+                <div class="card card-lift--hover shadow border-0 bg-gradient-cyan m-3 p-2">
+                    <h4 class="text-white text-uppercase">Памятка по профилактике новой коронавирусной инфекции COVID-19 для больных туберкулезом, находящихся в стационаре</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-3">
+                <div class="card card-lift--hover shadow border-0 bg-gradient-orange m-3 p-2">
+                    <h4 class="text-white text-uppercase">Упражнения лечебной физкультуры для пациентов</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-lift--hover shadow border-0 bg-gradient-teal m-3 p-2">
+                    <h4 class="text-white text-uppercase">ДНЕВНИК САМОКОНТРОЛЯ НА ИЮЛЬ ДЛЯ ПАЦИЕНТОВ, ПОЛУЧАЮЩИХ ЛЕЧЕНИЕ НА ДОМУ</h4>
+                </div>
+            </div>
+
+        </div>
+        </section>
+{% endblock %}
