@@ -95,4 +95,34 @@
   background: #0a0c0d;
 }
 
+.triangle-primary:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 20px solid transparent; border-bottom: 20px solid #5e72e4; border-left: 20px solid #5e72e4;
+}
+.triangle-success:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 20px solid transparent; border-bottom: 20px solid #2dce89; border-left: 20px solid #2dce89;
+}
+.triangle-warning:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 20px solid transparent; border-bottom: 20px solid #fb6340; border-left: 20px solid #fb6340;
+}
+.triangle-danger:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 20px solid transparent; border-bottom: 20px solid #f5365c; border-left: 20px solid #f5365c;
+}
+
+
 

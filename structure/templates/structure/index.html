@@ -7,7 +7,7 @@
 {% block content %}
 {% include 'inc/_headlist.html' %}
        <section class="section">
-      <div class="container">
+      <div class="mx-md-9">
         <div class="mt--200">
         <div class="row">
             {% for i in branches %}
@@ -16,7 +16,7 @@
                         <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle">
                             <i class="ni ni-building"></i>
                         </div>
-                        <h6 class="info-title text-uppercase text-dangerq">{{ i.name}}</h6>
+                        <h6 class="info-title text-uppercase text-danger">{{ i.name}}</h6>
                         <div class="description opacity-8">
                             <span class="badge badge-pill badge-danger text-uppercase">Адрес:</span>
                             <h6>{{ i.address}}</h6>

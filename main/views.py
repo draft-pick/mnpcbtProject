@@ -11,3 +11,10 @@ def existing_org(request):
         'title': 'Вышестоящие организации'
     }
     return render(request, 'main/existing_organizations.html', context=context)
+
+
+def management(request):
+    context = {
+        'title': 'Руководство Центра'
+    }
+    return render(request, 'main/management.html', context=context)
