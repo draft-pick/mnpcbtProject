@@ -124,5 +124,9 @@
   border: 20px solid transparent; border-bottom: 20px solid #f5365c; border-left: 20px solid #f5365c;
 }
 
+.big-test {
+  width: initial !important;
+}
+
 
 
