@@ -6,15 +6,15 @@ def index(request):
     return render(request, 'main/index.html')
 
 
-def existing_org(request):
-    context = {
-        'title': 'Вышестоящие организации'
-    }
-    return render(request, 'main/existing_organizations.html', context=context)
-
-
 def management(request):
     context = {
         'title': 'Руководство Центра'
     }
     return render(request, 'main/management.html', context=context)
+
+
+def chief_page(request):
+    context = {
+        'title': 'Страница главного фтизиатра'
+    }
+    return render(request, 'main/chief-phthisiatricians-page.html', context=context)

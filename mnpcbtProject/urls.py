@@ -20,6 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('pages/', include('django.contrib.flatpages.urls')),
     path('', include('main.url')),
     path('articles/', include('articles.url')),
     path('structure/', include('structure.url')),
@@ -28,6 +29,7 @@ urlpatterns = [
     path('paid-services/', include('paid_services.url')),
     path('patients-school/', include('patients_school.url')),
     path('covid-19', include('covid_19.url')),
+    path('reviews/', include('reviews.url')),
     path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 ]

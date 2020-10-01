@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'ckeditor',
     'ckeditor_uploader',
     'import_export',
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
     'paid_services.apps.PaidServicesConfig',
     'patients_school.apps.PatientsSchoolConfig',
     'covid_19.apps.Covid19Config',
+    'reviews.apps.ReviewsConfig',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'mnpcbtProject.urls'
@@ -144,3 +148,5 @@ CKEDITOR_CONFIGS = {
      'toolbar': 'None'
     },
 }
+
+SITE_ID = 1
