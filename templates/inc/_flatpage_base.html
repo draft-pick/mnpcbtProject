@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+ {{ flatpage.title }}
+{% endblock %}
+
+{% block content %}
+{% include 'inc/_headlist.html' %}
+    <section class="section">
+      <div class="container">
+        <div class="card card-profile shadow mt--200 p-3">
+            {{ flatpage.content }}
+            <button class="btn btn-lg btn-warning btn-icon-only rounded-circle m-3" type="button" onclick="history.back();">
+                <span class="btn-inner--icon"><i class="ni ni-bold-left"></i></span>
+            </button>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
