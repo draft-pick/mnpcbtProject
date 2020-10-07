@@ -107,3 +107,27 @@ $(document).ready(function(){
         }
     });
 });
+
+    // Slider reviews
+$(document).ready(function(){
+  $('#slider-reviews').owlCarousel({
+        loop:true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 3000,
+        margin:10,
+        nav:true,
+        dots: false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:2
+            }
+        }
+    });
+});

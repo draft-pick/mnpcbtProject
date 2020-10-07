@@ -7,5 +7,20 @@
 {% block content %}
 {% include 'inc/_headlist.html' %}
        <section class="section">
+        <div class="container">
+            <div class="card card-profile shadow mt--300">
+                <div class="carousel-wrap">
+                    <div class="owl-carousel owl-theme" id="slider-reviews">
+                        {% for i in reviews %}
+                            <div class="item p-3">
+                                <h5>{{ i.name }}</h5>
+                                <span class="badge-pill badge-danger text-uppercase">{{ i.date }}</span>
+                                {{ i.content }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
        </section>
 {%  endblock%}
