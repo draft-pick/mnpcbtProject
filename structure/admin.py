@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from import_export.admin import ImportExportModelAdmin
 from .models import *
 
 
@@ -23,5 +23,19 @@ class SpecialistsInline(admin.TabularInline):
 class BranchesAdmin(admin.ModelAdmin):
     inlines = [GalleryInline, SpecialistsInline]
 
+
+# @admin.register(Specialists)
+# class SpecialistsAdmin(admin.ModelAdmin):
+#     list_display = ('surname', 'name', 'patronymic')
+#     list_display_links = ('surname', 'name', 'patronymic')
+#     search_fields = ('surname', 'name')
+
+
+@admin.register(Specialists)
+class ViewAdmin(ImportExportModelAdmin):
+    list_display = ('keyBranches', 'surname', 'name', 'patronymic')
+    list_display_links = ('keyBranches', 'surname', 'name', 'patronymic')
+    search_fields = ('keyBranches', 'surname', 'name')
+    pass
 
 

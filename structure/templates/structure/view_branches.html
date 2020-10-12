@@ -96,10 +96,10 @@
                             {% endfor %}
                     </div>
                     <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-                    <div class="table-wrap">
-                    <table>
+                    <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
                         <thead>
-                            <tr>
+                            <tr class="bg-success">
                                 <th>Фамилия</th>
                                 <th>Имя</th>
                                 <th>Отчество</th>
@@ -109,14 +109,14 @@
                                 <th>Дата окончания</th>
                                 <th>Специальность</th>
                                 <th>Сертификат</th>
-                                <th>Дата выдачи</th>
+{#                                <th>Дата выдачи</th>#}
                                 <th>Категория</th>
                                 <th>Ученая степень</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
                               {% for s in specialists %}
+                                  <tr>
                                         <td>{{ s.surname }}</td>
                                         <td>{{ s.name }}</td>
                                         <td>{{ s.patronymic }}</td>
@@ -126,11 +126,11 @@
                                         <td>{{ s.date_vyz }}</td>
                                         <td>{{ s.profession }}</td>
                                         <td>{{ s.sertif }}</td>
-                                        <td>{{ s.date_sertif }}</td>
+{#                                        <td>{{ s.date_sertif }}</td>#}
                                         <td>{{ s.category }}</td>
                                         <td>{{ s.degree }}</td>
+                                  </tr>
                               {% endfor %}
-                            </tr>
                         </tbody>
                     </table>
                     </div>

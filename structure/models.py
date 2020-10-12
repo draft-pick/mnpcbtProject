@@ -30,19 +30,19 @@ class GalleryBranches(models.Model):
 
 
 class Specialists(models.Model):
-    keyBranches = models.ForeignKey(Branches, on_delete=models.CASCADE, related_name='specialist')
+    keyBranches = models.ForeignKey(Branches, on_delete=models.CASCADE, related_name='specialist', verbose_name='Филиал')
     surname = models.CharField(max_length=100, verbose_name='Фамилия')
     name = models.CharField(max_length=100, verbose_name='Имя')
-    patronymic = models.CharField(max_length=100, verbose_name='Отчество')
-    division = models.CharField(max_length=300, verbose_name='Подразделение (Наименование)')
-    job = models.CharField(max_length=200, verbose_name='Штатная должность (Наименование)')
-    vyz = models.CharField(max_length=300, verbose_name='ВУЗ')
-    date_vyz = models.CharField(max_length=100, verbose_name='Дата окончания')
-    profession = models.CharField(max_length=200, verbose_name='Специальность')
-    sertif = models.CharField(max_length=100, verbose_name='Сертификат')
-    date_sertif = models.CharField(max_length=100, verbose_name='Дата выдачи')
-    category = models.CharField(max_length=100, verbose_name='Категория')
-    degree = models.CharField(max_length=100, verbose_name='Степень')
+    patronymic = models.CharField(blank=True, max_length=100, verbose_name='Отчество')
+    division = models.CharField(blank=True, max_length=300, verbose_name='Подразделение (Наименование)')
+    job = models.CharField(blank=True, max_length=200, verbose_name='Штатная должность (Наименование)')
+    vyz = models.CharField(blank=True, max_length=300, verbose_name='ВУЗ')
+    date_vyz = models.CharField(blank=True, max_length=100, verbose_name='Дата окончания')
+    profession = models.CharField(blank=True, max_length=200, verbose_name='Специальность')
+    sertif = models.CharField(blank=True, max_length=100, verbose_name='Сертификат')
+    date_sertif = models.CharField(blank=True, max_length=100, verbose_name='Дата выдачи')
+    category = models.CharField(blank=True, max_length=100, verbose_name='Категория')
+    degree = models.CharField(blank=True, max_length=100, verbose_name='Степень')
 
     def __str__(self):
         return self.name

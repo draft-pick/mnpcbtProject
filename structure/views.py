@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from .models import *
+from django.core.paginator import Paginator
 
 
 def index(request):
     branches = Branches.objects.all()
+    paginator = Paginator(branches, 10)
     context = {
         'branches': branches,
+        'paginator': paginator,
         'title': 'Структура Центра',
     }
     return render(request, 'structure/index.html', context=context)
