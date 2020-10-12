@@ -115,7 +115,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                              {% for s in specialists %}
+                              {% for s in contacts%}
                                   <tr>
                                         <td>{{ s.surname }}</td>
                                         <td>{{ s.name }}</td>
@@ -130,6 +130,21 @@
                                         <td>{{ s.category }}</td>
                                         <td>{{ s.degree }}</td>
                                   </tr>
+                                  <div class="pagination">
+    <span class="step-links">
+        {% if contacts.has_previous %}
+            <a href="?page={{ contacts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ contacts.number }} of {{ contacts.paginator.num_pages }}.
+        </span>
+
+        {% if contacts.has_next %}
+            <a href="?page={{ contacts.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
                               {% endfor %}
                         </tbody>
                     </table>
