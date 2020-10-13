@@ -13,20 +13,20 @@
             {% for i in branches %}
                 <div class="col-md-4">
                     <div class="card shadow-sm py-3 px-3 info">
-                        <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle">
+                        <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">
                             <i class="ni ni-building"></i>
                         </div>
                         <h6 class="info-title text-uppercase text-danger">{{ i.name}}</h6>
                         <div class="description opacity-8">
-                            <span class="badge badge-pill badge-danger text-uppercase">Адрес:</span>
+                            <span class="badge badge-pill badge-primary text-uppercase">Адрес:</span>
                             <h6>{{ i.address}}</h6>
-                            <span class="badge badge-pill badge-danger text-uppercase">Телефон:</span><br>
+                            <span class="badge badge-pill badge-primary text-uppercase">Телефон:</span><br>
                             <h6>{{ i.phones }}</h6>
-                            <span class="badge badge-pill badge-danger text-uppercase">Электронный адрес:</span>
+                            <span class="badge badge-pill badge-primary text-uppercase">Электронный адрес:</span>
                             <h6>{{ i.email}}</h6>
                         </div>
-                        <a href="{{ i.get_absolute_url }}" class="text-right text-warning">ПОДРОБНЕЕ
-                            <i class="ni ni-curved-next text-warning"></i>
+                        <a href="{{ i.get_absolute_url }}" class="text-right text-primary">ПОДРОБНЕЕ
+                            <i class="ni ni-curved-next text-danger"></i>
                         </a>
                     </div>
                 </div>
