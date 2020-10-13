@@ -34,6 +34,13 @@
 .left-mm li:last-child {
   border-bottom: none;
 }
+@media (max-width: 768px) {
+  .left-mm {
+    position: relative;
+    background: none;
+    max-width: none;
+  }
+}
 
 .contact-info {
   padding-left: 0 !important;
