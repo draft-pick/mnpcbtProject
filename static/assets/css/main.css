@@ -40,6 +40,13 @@
     background: none;
     max-width: none;
   }
+  .left-mm .btn{
+    height: 100px;
+    font-size: 14px;
+  }
+  .left-mm .btn-primary {
+    background-color: rgba(94,114,228, .6);
+  }
 }
 
 .contact-info {
@@ -133,6 +140,12 @@
 
 .big-test {
   width: initial !important;
+}
+
+.slogan-bg {
+  background-color: rgba(199,199,199,.2);
+  border-radius: 20px;
+
 }
 
 
