@@ -9,13 +9,7 @@
   font-size: 16px !important;
 }
 .left-mm{
-  max-width: 300px;
   background-color: rgba(164, 63, 73, .5);
-  position: absolute; 
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
   padding: 10px;
 }
 .left-mm ul {
