@@ -11,22 +11,20 @@
 .left-mm{
   background-color: rgba(255,255,255, .5);
   padding: 10px;
+  height: 300px;
 }
-.left-mm ul {
-  color: #fff;
-}
-.left-mm li {
-  list-style-type: none;
-  font-size: 1.4rem;
-  text-align: center;
-  border-bottom: 1px solid rgb(175, 175, 175);
-  padding: 10px;
-}
+
 .left-mm a {
   color: #fff;
 }
 .left-mm li:last-child {
   border-bottom: none;
+}
+.card-height {
+  height: 250px;
+}
+.left-mm .size-fnt {
+  font-size: 20px;
 }
 @media (max-width: 768px) {
   .left-mm {
@@ -34,12 +32,11 @@
     background: none;
     max-width: none;
   }
-  .left-mm .btn{
-    height: 100px;
-    font-size: 14px;
-  }
   .left-mm .btn-primary {
     background-color: rgba(94,114,228, .6);
+  }
+  .left-mm .size-fnt {
+    font-size: 16px;
   }
 }
 
@@ -141,6 +138,32 @@
   border-radius: 20px;
 
 }
+
+.item{
+  opacity:0.4;
+  transition:.4s ease all;
+  transform:scale(.8);
+}
+@media(max-width:1000px){
+  .item{margin:0; transform:scale(.9)}
+}
+.active .item{
+  opacity:1;
+  transform:scale(1);
+}
+
+.owl-item {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+.inner{position:absolute; bottom:30px; left:0; right:0; text-align:center;}
+.inner a{color:#fff; text-decoration:none; border-bottom:2px solid rgba(255,255,255,0.5); transition:.3s ease border-color}
+.inner a:hover{border-color:#fff;}
+.black .inner a{color:#000; border-color:rgba(0,0,0,0.4)}
+.black .inner a:hover{border-color:#000;}
+
+.owl-controls{position:absolute; margin-top:300px;}
 
 
 

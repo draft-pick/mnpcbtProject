@@ -135,22 +135,30 @@ $(document).ready(function(){
     // Slider mm
 $(document).ready(function(){
   $('#slider-mm').owlCarousel({
+        stagePadding: 200,
         loop:true,
         autoplay: true,
         autoplayHoverPause: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 1000,
         margin:10,
         nav:true,
+        navText: [
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
         dots: false,
         responsive:{
             0:{
-                items:2
+                items:2,
+                stagePadding: 30
             },
             600:{
-                items:2
+                items:2,
+                stagePadding: 30
             },
             1000:{
-                items:2
+                items:2,
+                stagePadding: 80
             }
         }
     });
