@@ -1,4 +1,21 @@
-
+.fs-sm {
+  font-size: 14px;
+}
+.fs-md {
+  font-size: 16px;
+}
+.fs-lg {
+  font-size: 20px;
+}
+.fs-xl {
+  font-size: 24px;
+}
+.fs-xxl {
+  font-size: 30px;
+}
+.wd-40 {
+  width: 40px !important;
+}
 .header-scrolled {
   background: rgba(23,43,77, .9) !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
@@ -9,9 +26,11 @@
   font-size: 16px !important;
 }
 .left-mm{
-  background-color: rgba(255,255,255, .5);
+  background-color: #fff;
+border-bottom: 120px solid #ec3504;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
   padding: 10px;
-  height: 300px;
 }
 
 .left-mm a {
@@ -22,6 +41,17 @@
 }
 .card-height {
   height: 250px;
+}
+.card-bg:before {
+  content: "";
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: -90px;
+  top: -90px;
+  border-radius: 50%;
+  opacity: .3;
 }
 .left-mm .size-fnt {
   font-size: 20px;

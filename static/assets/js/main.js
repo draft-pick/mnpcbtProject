@@ -150,7 +150,8 @@ $(document).ready(function(){
         responsive:{
             0:{
                 items:2,
-                stagePadding: 30
+                stagePadding: 30,
+                nav:false
             },
             600:{
                 items:2,
