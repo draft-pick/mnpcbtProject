@@ -141,11 +141,7 @@ $(document).ready(function(){
         autoplayHoverPause: true,
         autoplaySpeed: 1000,
         margin:10,
-        nav:true,
-        navText: [
-        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-        ],
+        nav:false,
         dots: false,
         responsive:{
             0:{

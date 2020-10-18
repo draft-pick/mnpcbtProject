@@ -22,11 +22,11 @@
           <div class="d-flex align-items-center py-md-7">
           <div class="col px-0">
             <div class="row align-items-center justify-content-center">
-                <div class="col-lg-4 order-2 order-sm-1">
+                <div class="col-lg-4 order-2 order-sm-1 mb-3">
                     {% include 'inc/_sidebar.html' %}
                 </div>
 
-              <div class="col-lg-5 order-1 order-sm-2">
+              <div class="col-lg-5 order-1 order-sm-2 mb-3">
                   <div class="slogan-bg px-3">
                        <p class="lead text-white d-none d-xl-block">Государственное бюджетное учреждение здравоохранения города Москвы "Московский научно-практический центр борьбы с туберкулезом
                            Департамента здравоохранения города Москвы"</p>
@@ -46,7 +46,7 @@
 
                 <div class="col-lg-3 order-sm-3 order-3 text-center" data-aos="fade-left" style="z-index: 1000;">
                     <a class="text-white" href="{%  url 'patients-school' %}">
-                        <div class="btn btn-warning btn-3">
+                        <div class="badge badge-pill badge-default text-uppercase mb-3">
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-3 text-right">
                                     <i class="display-3 ni ni-hat-3"></i>
@@ -58,15 +58,32 @@
                         </div>
                     </a>
 
-                    <button class="btn btn-icon btn-3 btn-info mb-3" type="button">
-                        <span class="btn-inner--icon"><i class="ni ni-like-2"></i></span>
-                        <span class="btn-inner--text">Независимая оценка качества оказания услуг медицинскими организациями</span>
-                    </button>
+                    <a class="text-white" href="{%  url 'patients-school' %}">
+                        <div class="badge badge-pill badge-default text-uppercase mb-3">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-3 text-right">
+                                    <i class="display-3 ni ni-like-2"></i>
+                                </div>
+                                <div class="col-9 text-left">
+                                    <span class="text-left">Независимая оценка<br> качества оказания<br> услуг медицинскими<br> организациями</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
-                    <button class="btn btn-icon btn-3 btn-info" type="button">
-                        <span class="btn-inner--icon"><i class="fa fa-bar-chart"></i></span>
-                        <span class="btn-inner--text">График приема населения</span>
-                    </button>
+                    <a class="text-white" href="{%  url 'patients-school' %}">
+                        <div class="badge badge-pill badge-default text-uppercase mb-3">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-3 text-right">
+                                    <i class="display-3 fa fa-bar-chart"></i>
+                                </div>
+                                <div class="col-9 text-left">
+                                    <span class="text-left">График приема населения</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
             </div>
           </div>
