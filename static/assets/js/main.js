@@ -48,10 +48,10 @@ $(document).ready(function(){
         dots: false,
         responsive:{
             0:{
-                items:2
+                items:1
             },
             600:{
-                items:3
+                items:2
             },
             1000:{
                 items:4
@@ -150,11 +150,11 @@ $(document).ready(function(){
                 nav:false
             },
             600:{
-                items:2,
+                items:3,
                 stagePadding: 30
             },
             1000:{
-                items:2,
+                items:4,
                 stagePadding: 80
             }
         }

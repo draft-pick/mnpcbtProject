@@ -24,6 +24,10 @@
 }
 .badge {
   font-size: 16px !important;
+  white-space: normal !important;
+}
+.card {
+  white-space: normal !important;
 }
 
 .left-mm a {
