@@ -16,6 +16,9 @@
 .wd-40 {
   width: 40px !important;
 }
+h7 {
+  font-size: 12px;
+}
 .header-scrolled {
   background: rgba(23,43,77, .9) !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;

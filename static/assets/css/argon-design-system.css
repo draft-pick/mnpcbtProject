@@ -20539,27 +20539,32 @@ textarea[resize="horizontal"] {
 }
 
 .section-shaped .shape-default {
-  background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,230,241,1) 0%, rgba(145,192,241,1) 45.5% );
 }
 
 .section-shaped .shape-default :nth-child(1) {
   background: #7795f8;
+    opacity: .3;
 }
 
 .section-shaped .shape-default :nth-child(2) {
   background: #7b9aff;
+    opacity: .3;
 }
 
 .section-shaped .shape-default :nth-child(3) {
   background: #6f8ff8;
+    opacity: .3;
 }
 
 .section-shaped .shape-default :nth-child(4) {
   background: #76eea7;
+    opacity: .3;
 }
 
 .section-shaped .shape-default :nth-child(5) {
   background: #6adaff;
+    opacity: .3;
 }
 
 .section-shaped .shape-light {
