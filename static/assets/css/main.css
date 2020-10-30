@@ -29,6 +29,59 @@ h7 {
   font-size: 16px !important;
   white-space: normal !important;
 }
+.badge-color-one {
+    background-color: #e94a54;
+}
+.btn-primary {
+    background-color: #5e72e4;
+    border-color: #5e72e4;
+}
+.text-primary {
+    color: #5e72e4!important;
+}
+.text-color-two {
+    color: #9059a0;
+}
+.badge-color-two {
+    background-color: #9059a0;
+}
+.text-color-three {
+    color: #f6a321;
+}
+.badge-color-three {
+    background-color: #f6a321;
+}
+.text-color-four {
+    color: #116466;
+}
+.badge-color-four {
+    background-color: #116466;
+}
+.icon-shape-color-white {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.icon-shape-color-one {
+  color: #e94a54;
+  background-color: rgba(233, 74, 84, 0.5);
+}
+
+.icon-shape-color-two {
+  color: #9059a0;
+  background-color: rgba(144, 89, 160, 0.5);
+}
+
+.icon-shape-color-three {
+  color: #f6a321;
+  background-color: rgba(246, 163, 33, 0.5);
+}
+
+.icon-shape-color-four {
+  color: #116466;
+  background-color: rgba(17, 100, 102, 0.5);
+}
+
 .card {
   white-space: normal !important;
 }
