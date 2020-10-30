@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
- Главная страница
+{{ title }}
 {% endblock %}
 
 {% block content %}
@@ -248,6 +248,29 @@
     </div>
     </section>
 
+<div>
+    {% for i in branches %}
+         <div class="item">
+       <div class="card shadow-sm py-3 px-3 info">
+                        <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">
+                            <i class="ni ni-building"></i>
+                        </div>
+                        <h6 class="info-title text-uppercase text-danger">{{ i.name}}</h6>
+                        <div class="description opacity-8">
+                            <span class="badge badge-pill badge-primary text-uppercase">Адрес:</span>
+                            <h6>{{ i.address}}</h6>
+                            <span class="badge badge-pill badge-primary text-uppercase">Телефон:</span><br>
+                            <h6>{{ i.phones }}</h6>
+                            <span class="badge badge-pill badge-primary text-uppercase">Электронный адрес:</span>
+                            <h6>{{ i.email}}</h6>
+                        </div>
+                        <a href="{{ i.get_absolute_url }}" class="text-right text-primary">ПОДРОБНЕЕ
+                            <i class="ni ni-curved-next text-danger"></i>
+                        </a>
+                    </div>
+         </div>
+{% endfor %}
+</div>
 {#    End branches#}
 
     <div class="container" data-aos="fade-left">
@@ -301,6 +324,7 @@
                                     </div>
                                 </div>
     </div>
+
 {#END important link#}
       <section class="section section-lg section-shaped">
     <div class="shape shape-style-1 shape-default">

@@ -1,9 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from structure.models import Branches
 
 
 def index(request):
-    return render(request, 'main/index.html')
+    branches = Branches.objects.all()
+    context = {
+        'branches': branches,
+        'title': 'Главная страница',
+    }
+    return render(request, 'main/index.html', context=context)
 
 
 def management(request):
@@ -18,3 +24,5 @@ def chief_page(request):
         'title': 'Страница главного фтизиатра'
     }
     return render(request, 'main/chief-phthisiatricians-page.html', context=context)
+
+
