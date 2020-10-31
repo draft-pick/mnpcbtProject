@@ -13,7 +13,7 @@
               {% for i in news %}
                    <div class="card shadow card-lift--hover posts-blk mt-4 p-3">
                         <div class="d-md-flex">
-                            <div class="img-title d-md-flex align-items-center justify-content-center">
+                            <div class="img-title d-md-flex align-items-center justify-content-center text-center">
                                 {% for j in image %}
                                     {% if j.product_id == i.id %}
                                       <img alt="" src="{{ j.image.url }}" class="img-fluid rounded shadow-lg" width="200px">
@@ -22,21 +22,28 @@
                             </div>
                             <div class="ml-3 w-100">
                                 <h4 class="text-primary">{{ i.title }}</h4>
-                                <div class="date">
-                                    <button class="btn btn-danger btn-icon-only rounded-circle" type="button">
-                                        <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
-                                    </button>
-                                        <span class="btn-inner--text">{{ i.created_at|date:"d E Y" }}</span>
 
-                                </div>
                                 <h5>{{ i.anons }}</h5>
-                                    <div class="text-right">
-                                        <a href="{{ i.get_absolute_url }}">
-                                          <button class="btn btn-lg btn-success btn-icon-only rounded-circle" type="button">
-                                            <span class="btn-inner--icon"><i class="ni ni-curved-next"></i></span>
-                                          </button>
-                                        </a>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="date">
+                                            <button class="btn btn-warning btn-icon-only rounded-circle" type="button">
+                                                <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
+                                            </button>
+                                                <span class="btn-inner--text">{{ i.created_at|date:"d E Y" }}</span>
+                                        </div>
                                     </div>
+                                    <div class="col-3 p-0 pr-4 ">
+                                        <div class="text-right">
+                                                <a href="{{ i.get_absolute_url }}">
+                                                  <button class="btn btn-lg btn-success btn-icon-only rounded-circle" type="button">
+                                                    <span class="btn-inner--icon"><i class="ni ni-curved-next"></i></span>
+                                                  </button>
+                                                </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                    </div>
