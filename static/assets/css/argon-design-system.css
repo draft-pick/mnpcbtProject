@@ -5015,8 +5015,8 @@ input[type="button"].btn-block {
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
   }
 
   .navbar-expand-lg>.container,
