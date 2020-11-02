@@ -33,7 +33,7 @@ h7 {
   z-index: 99999;
 }
 .logo-img {
-  width: 70px;
+  width: 200px;
 }
 .badge {
   font-size: 16px !important;
@@ -110,6 +110,10 @@ h7 {
 
 .card {
   white-space: normal !important;
+}
+
+.mm {
+  background-color: rgba(193,53,132,.5);
 }
 
 .left-mm a {
@@ -252,6 +256,9 @@ h7 {
   opacity:0.4;
   transition:.4s ease all;
   transform:scale(.8);
+  border: 3px solid #fff;
+  padding: 3px;
+  border-radius: 6px;
 }
 @media(max-width:1000px){
   .item{margin:0; transform:scale(.9)}

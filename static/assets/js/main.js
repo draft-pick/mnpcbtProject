@@ -154,8 +154,8 @@ $(document).ready(function(){
                 stagePadding: 30
             },
             1000:{
-                items:4,
-                stagePadding: 80
+                items:3,
+                stagePadding: 60
             }
         }
     });
