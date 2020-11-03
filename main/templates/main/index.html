@@ -22,13 +22,14 @@
       <div class="page-header">
         <div class="py-6">
           <div class="col px-0">
-              <div class="px-lg-9 mm">
+              <div class="px-lg-9 mm p-3">
                   <div class="container">
                       <div class="row">
-                          <div class="col-4"><h5>Государственное бюджетное учреждение здравоохранения города Москвы "Московский научно-практический центр борьбы с туберкулезом
+                          <div class="col-4 d-none d-lg-block"><h5>Государственное бюджетное учреждение здравоохранения города Москвы "Московский научно-практический центр борьбы с
+                              туберкулезом
                               Департамента здравоохранения города Москвы"
                               The Moscow Research and Clinical Center for Tuberculosis Control of the Moscow Government Department of Health</h5></div>
-                          <div class="col-8">{% include 'inc/_sidebar.html' %}</div>
+                          <div class="col-12 col-lg-8">{% include 'inc/_sidebar.html' %}</div>
                       </div>
                   </div>
               </div>
@@ -39,12 +40,12 @@
                 </div>
 
 
-                <div class="col-12 order-sm-3 order-3 text-center" data-aos="fade-left">
+                <div class="col-12 order-sm-3 order-3 text-center mt-3" data-aos="fade-left">
                     <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <a class="text-white" href="{%  url 'patients-school' %}">
-                                <div class="card bg-gradient-success align-items-center justify-content-center shadow-sm p-2 p-md-4 mb-3">
+                                <div class="card bg-gradient-purple align-items-center justify-content-center shadow-sm p-2 p-md-4 mb-3">
                                     <div class="row align-items-center justify-content-center">
                                         <div class="col-3 text-right">
                                             <i class="display-3 ni ni-hat-3"></i>
@@ -58,7 +59,7 @@
                         </div>
                         <div class="col-12 col-md-4">
                             <a class="text-white" href="{%  url 'patients-school' %}">
-                                <div class="card bg-gradient-success align-items-center justify-content-center shadow-sm p-2 p-md-4 mb-3">
+                                <div class="card bg-gradient-purple align-items-center justify-content-center shadow-sm p-2 p-md-4 mb-3">
                                     <div class="row align-items-center justify-content-center">
                                         <div class="col-3 text-right">
                                             <i class="display-3 ni ni-like-2"></i>
@@ -72,7 +73,7 @@
                         </div>
                         <div class="col-12 col-md-4">
                             <a class="text-white" href="{%  url 'patients-school' %}">
-                                <div class="card bg-gradient-success align-items-center justify-content-center shadow-sm p-2 p-md-4 mb-3">
+                                <div class="card bg-gradient-purple align-items-center justify-content-center shadow-sm p-2 p-md-4 mb-3">
                                     <div class="row align-items-center justify-content-center">
                                         <div class="col-3 text-right">
                                             <i class="display-3 fa fa-bar-chart"></i>
@@ -252,29 +253,29 @@
     </div>
     </section>
 
-<div>
-    {% for i in branches %}
-         <div class="item">
-       <div class="card shadow-sm py-3 px-3 info">
-                        <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">
-                            <i class="ni ni-building"></i>
-                        </div>
-                        <h6 class="info-title text-uppercase text-danger">{{ i.name}}</h6>
-                        <div class="description opacity-8">
-                            <span class="badge badge-pill badge-primary text-uppercase">Адрес:</span>
-                            <h6>{{ i.address}}</h6>
-                            <span class="badge badge-pill badge-primary text-uppercase">Телефон:</span><br>
-                            <h6>{{ i.phones }}</h6>
-                            <span class="badge badge-pill badge-primary text-uppercase">Электронный адрес:</span>
-                            <h6>{{ i.email}}</h6>
-                        </div>
-                        <a href="{{ i.get_absolute_url }}" class="text-right text-primary">ПОДРОБНЕЕ
-                            <i class="ni ni-curved-next text-danger"></i>
-                        </a>
-                    </div>
-         </div>
-{% endfor %}
-</div>
+{#<div>#}
+{#    {% for i in branches %}#}
+{#         <div class="item">#}
+{#       <div class="card shadow-sm py-3 px-3 info">#}
+{#                        <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">#}
+{#                            <i class="ni ni-building"></i>#}
+{#                        </div>#}
+{#                        <h6 class="info-title text-uppercase text-danger">{{ i.name}}</h6>#}
+{#                        <div class="description opacity-8">#}
+{#                            <span class="badge badge-pill badge-primary text-uppercase">Адрес:</span>#}
+{#                            <h6>{{ i.address}}</h6>#}
+{#                            <span class="badge badge-pill badge-primary text-uppercase">Телефон:</span><br>#}
+{#                            <h6>{{ i.phones }}</h6>#}
+{#                            <span class="badge badge-pill badge-primary text-uppercase">Электронный адрес:</span>#}
+{#                            <h6>{{ i.email}}</h6>#}
+{#                        </div>#}
+{#                        <a href="{{ i.get_absolute_url }}" class="text-right text-primary">ПОДРОБНЕЕ#}
+{#                            <i class="ni ni-curved-next text-danger"></i>#}
+{#                        </a>#}
+{#                    </div>#}
+{#         </div>#}
+{#{% endfor %}#}
+{#</div>#}
 {#    End branches#}
 
     <div class="container" data-aos="fade-left">

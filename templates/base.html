@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 
 <!doctype html>
@@ -25,11 +26,19 @@
   <!-- CSS Files -->
   <link href="{% static 'assets/css/argon-design-system.css'%}" rel="stylesheet" />
   <link href="{% static 'assets/css/main.css'%}" rel="stylesheet" />
-    <title>{% block title %} {% endblock %} - MNPCBT.RU</title>
+  <title>{% block title %} {% endblock %} - MNPCBT.RU</title>
 </head>
 <body class="index-page">
     {% include 'inc/_navbar.html' %}
     {% autoescape off %}
+        {% block breadcrumbs %}
+            <div class="breadcrumbs">
+                <a href="{% url 'home' %}">{% trans 'Home' %}</a>
+                {% block crumbs %}
+                    {% if title %} &rsaquo; {{ title }}{% endif %}
+                {% endblock %}
+            </div>
+        {% endblock %}
 {% block content %}
 {% endblock %}
     {% endautoescape %}
