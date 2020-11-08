@@ -31,14 +31,14 @@
 <body class="index-page">
     {% include 'inc/_navbar.html' %}
     {% autoescape off %}
-        {% block breadcrumbs %}
-            <div class="breadcrumbs">
-                <a href="{% url 'home' %}">{% trans 'Home' %}</a>
-                {% block crumbs %}
-                    {% if title %} &rsaquo; {{ title }}{% endif %}
-                {% endblock %}
-            </div>
-        {% endblock %}
+{#        {% block breadcrumbs %}#}
+{#            <div class="breadcrumbs">#}
+{#                <a href="{% url 'home' %}">{% trans 'Home' %}</a>#}
+{#                {% block crumbs %}#}
+{#                    {% if title %} &rsaquo; {{ title }}{% endif %}#}
+{#                {% endblock %}#}
+{#            </div>#}
+{#        {% endblock %}#}
 {% block content %}
 {% endblock %}
     {% endautoescape %}

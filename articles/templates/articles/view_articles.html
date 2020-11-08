@@ -27,6 +27,12 @@
                 <h1 class="text-white display-1">{{ articles_item.title }}</h1>
               </div>
             </div>
+              {% if request.path != "/" %}
+                         <button type="button" class="btn btn-sm btn-default btn-tooltip" data-toggle="tooltip"
+                                 data-placement="top" title="Tooltip on top" data-container="body" data-animation="true">
+                             <a href="{% url 'home' %}">Главная</a> / <a href="{% url 'articles' %}">Наши статьи</a> / {{ articles_item.title }}
+                         </button>
+                       {% endif %}
               <div class="row">
                   <div class="col-md-6">
                       <button class="btn btn-icon btn-3 btn-success" type="button">
